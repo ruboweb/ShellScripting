@@ -29,7 +29,7 @@ fi
 if [ $1 = "-a" ];
 then
 	bkauto="/media/backups/snapshots/$hoy.server.img.gz"
-	sudo dd if=/dev/mmcblk0  bs=1M | gzip > $bkauto
+	dd if=/dev/mmcblk0  bs=1M | gzip > $bkauto
 exit
 fi
 
@@ -44,7 +44,7 @@ then
 	fi
 
 	bkmanual="/media/backups/hitos/$hoy.$2.server.img.gz"
-	sudo pv /dev/mmcblk0 | dd bs=1M | gzip > $bkmanual
+	pv /dev/mmcblk0 | dd bs=1M | gzip > $bkmanual
 exit
 fi
 
