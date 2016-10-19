@@ -43,6 +43,32 @@ It can be automated by including it as a cron task.
 
 
 
+## maintenance.sh
+Automatice maintenance tasks
+
+### Execute
+```sh
+$ sudo ./maintenance.sh [OPTIONS]
+```
+[OPTIONS]:
+* f : Copy configuration files
+* c : Copy cron files
+* h : Package /home 
+* s : Package /usr/scripts
+* w : Packageo /www
+* b : Backup SD card
+* v : Clean /.watch
+* n : Notify
+
+### Configure
+Adapt paths to your system and add all the tasks you need. Then confiure your cron, to automatice. For example:
+```sh
+$ crontab -e
+
+0 5 * * SUM sudo ./maintenance.sh chswvn
+0 2 1 * *   sudo ./maintenance.sh fbn
+```
+
 ## push.sh
 Send push notification to http://www.pushetta.com/
 
