@@ -105,3 +105,26 @@ Edit next lines:
 
 ### Improvements
 * Notify when download is complete (pushetta?).
+
+
+
+## transmission_move.sh
+Move downloaded files to specific directories, by type: Films or Series. The script create directories for the Series.
+
+### Execute
+```sh
+$ sudo ./transmission_move.sh
+```
+
+### Configure
+The script requires set two variables:
+
+> dwn_dir: Generic directory to download files
+
+> series_dir: Specific directory to Series
+
+> film_dir: Specific directory to Films
+
+
+### Improvements
+* Can modify to add more extensions files or add more specific directories, for example documentals, ...
