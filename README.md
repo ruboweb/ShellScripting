@@ -116,6 +116,8 @@ Move downloaded files to specific directories, by type: Films or Series. The scr
 $ sudo ./transmission_move.sh
 ```
 
+Create cron task or execute this script from 'transmission_clean.sh'
+
 ### Configure
 The script requires set two variables:
 
