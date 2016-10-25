@@ -14,4 +14,6 @@ do
         transmission-remote $SERVER --torrent $TORRENTID --remove
     fi
 done
+
+	#./transmission_move.sh
 exit
