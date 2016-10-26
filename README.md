@@ -103,9 +103,12 @@ Edit next lines:
 
 > "script-torrent-done-filename": "/usr/scripts/transmission_clean.sh",
 
-### Improvements
-* Notify when download is complete (pushetta?).
 
+### Configure
+Optionally, can configure path to:
+> pushetta.sh
+
+> transmission_move.sh
 
 
 ## transmission_move.sh
