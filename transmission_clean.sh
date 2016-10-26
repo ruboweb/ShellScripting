@@ -11,9 +11,13 @@ do
     STATE_STOPPED=`transmission-remote $SERVER --torrent $TORRENTID --info | grep "State: Seeding\|Stopped\|Finished\|Idle"`
 
     if [ "$DL_COMPLETED" ] && [ "$STATE_STOPPED" ]; then
+		# Notify with pushetta
+		FILE=`transmission-remote $SERVER --torrent $TORRENTID  --info | grep Name: | cut -d" " -f4`
+        ./push.sh Downloaded: $FILE
+
         transmission-remote $SERVER --torrent $TORRENTID --remove
     fi
 done
-
-	#./transmission_move.sh
+	# Move to specific directory
+	./transmission_move.sh
 exit
