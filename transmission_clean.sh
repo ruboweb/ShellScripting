@@ -12,7 +12,7 @@ do
 
     if [ "$DL_COMPLETED" ] && [ "$STATE_STOPPED" ]; then
 		# Notify with pushetta
-		FILE=`transmission-remote $SERVER --torrent $TORRENTID  --info | grep Name: | cut -d" " -f4`
+		FILE=`transmission-remote $SERVER --torrent $TORRENTID  --info | grep Name: | sed -r 's/[ ]+/_/g'`
         #./push.sh Downloaded: $FILE # set correct path
 
         transmission-remote $SERVER --torrent $TORRENTID --remove
