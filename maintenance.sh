@@ -104,11 +104,12 @@
 
 	
 	
-	# Clean /.watch
+	# Clean .watch, .logs,....
 	# --------------------------------------------------------------------
 	if [[ $1 == *"v"* ]];
 	then
 		rm -r /server/.watch/*.torrent.added 2> /dev/null
+		rm -r /www/scanner/logs/*.log 2> /dev/null
 	fi
 	
 	
