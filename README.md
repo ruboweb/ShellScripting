@@ -29,6 +29,17 @@ In the following lines the script references /dev/mmcblk0 . Adapt to your system
 
 
 
+
+## cacheClean.sh
+It allows clean memory cache.
+
+### Execute
+```sh
+$ sudo ./cacheClean.sh
+```
+
+
+
 ## dlna_refresh.sh
 Deletes the database server and the reindexing minidlna again.
 
